@@ -1,0 +1,22 @@
+body {
+
+  background: url(https://streetcat.wiki/images/5/50/Freshlycat.png);
+  background-color: violet;
+  color: blue;
+  font-family: cursive;
+
+}
+p {
+  color: black;
+}
+h1 {
+  font-weight: bold;
+  color: red;
+  text-align:center;
+  text-shadow: 10px 10px green;
+  font-family: fantasy;
+}
+h7 {font-family: monospace; font-size: 10px; color: BLACK;}
+a:link{color:blue;}
+a:visited{color:pink;}
+a:hover{color: red}
