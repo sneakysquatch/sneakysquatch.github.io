@@ -1,5 +1,5 @@
 body{background:blue; }
-h1 {color:red; font-family:cursive; text-shadow:20px 10px black}
+h1 {color:red; font-family:cursive; text-shadow:20px 10px 1px black}
 .sigma{color:black; text-decoration: none}
 .sigmoid{color:black; text-decoration: overline}
 .countdown {text-align: center}
