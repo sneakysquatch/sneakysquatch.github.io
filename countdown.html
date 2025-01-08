@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Friday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .countdown {
+            text-align: center;
+        }
+        .countdown h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .countdown p {
+            font-size: 1.5rem;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <h1>Countdown to Next Friday at 1:00 PM</h1>
+        <p id="timer">Calculating...</p>
+    </div>
+    <script>
+        function getNextFridayAt1PM() {
+            const now = new Date();
+            const nextFriday = new Date(now);
+
+            // Calculate days until next Friday
+            const daysUntilFriday = (5 - now.getDay() + 7) % 7 || 7;
+            nextFriday.setDate(now.getDate() + daysUntilFriday);
+
+            // Set to 1:00 PM
+            nextFriday.setHours(13, 0, 0, 0);
+            return nextFriday;
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const nextFriday = getNextFridayAt1PM();
+            const timeDiff = nextFriday - now;
+
+            if (timeDiff <= 0) {
+                document.getElementById("timer").innerText = "It's time!";
+                return;
+            }
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerText =
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Start the countdown
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
+//Code created by ChatGPT! Thanks, buddy. 
