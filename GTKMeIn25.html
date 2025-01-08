@@ -53,15 +53,26 @@ job?</b></li>
 <li><b>What would you like your teacher to know about you?</b></li>
 <p>I don't know much about Excel <sub>yet</sub> but I am excited to learn!</p>
 <li><b>How can I help you during the start of this school year?</b></li>
-<p>Bit late for that pal <img src="gummy.png"></p> 
+<p>Bit late for that pal <a onclick="myAudioFunction('A');"><img src="gummy.png"></a></p> 
 <li><b>Anything else you’d like to include!</b></li>
 <p>Let me know if you like my haphazard web design... Bit ramshackle but it works</p>
 <ol>
+<script>
+     var aAudio = new Audio('squeakytoy.mp3');
+     var bAudio = new Audio('horn.mp3');
+     function myAudioFunction(letter) {
+         if(letter == 'a') {
+             aAudio.play();
+         } else if(letter == 'b') {
+             bAudio.play();
+         }
+     }
+ </script>
 <div><marquee
   direction="down"
   width="250"
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"><img src=excel.svg height="50" width="50"></marquee>
+  <marquee behavior="alternate"><a onclick="myAudioFunction('B');"><img src=excel.svg height="50" width="50"></a></marquee>
 </marquee>  <b>   he is contained... for now</b> </div>
