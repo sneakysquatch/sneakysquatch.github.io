@@ -16,5 +16,47 @@
     <img src="tenor.gif">
     <hr>
     <iframe src="Super Mario Bros.html" height="500" width="500">
+	<div class="countdown">
+        <h3>Countdown to Next Daima Episode Airing</h3>
+        <p id="timer">Calculating...</p>
+    </div>
+    <script>
+        function getNextFridayAt1PM() {
+            const now = new Date();
+            const nextFriday = new Date(now);
+
+            // Calculate days until next Friday
+            const daysUntilFriday = (5 - now.getDay() + 7) % 7 || 7;
+            nextFriday.setDate(now.getDate() + daysUntilFriday);
+
+            // Set to 1:00 PM
+            nextFriday.setHours(13, 0, 0, 0);
+            return nextFriday;
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const nextFriday = getNextFridayAt1PM();
+            const timeDiff = nextFriday - now;
+
+            if (timeDiff <= 0) {
+                document.getElementById("timer").innerText = "It's time!";
+                return;
+            }
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerText =
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Start the countdown
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
     </body>
 </html>
