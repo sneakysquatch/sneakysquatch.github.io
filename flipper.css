@@ -1,0 +1,22 @@
+body {
+
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8sIFQzAp6hOkqyXdeCkqxq4Ey8yo0OIZQhQ&s);
+  background-color: violet;
+  color: blue;
+  font-family: cursive;
+
+}
+p {
+  color: black;
+  font-weight: bold;
+}
+h1 {
+  font-weight: bold;
+  color: red;
+  text-align:center;
+  font-family: fantasy;
+}
+h7 {font-family: monospace; font-size: 10px; color: BLACK;}
+a:link{color:blue;}
+a:visited{color:pink;}
+a:hover{color: red}
