@@ -7,12 +7,12 @@ body {
 
 }
 p {
-  color: black;
+  color: blue;
   font-weight: bold;
 }
 h1 {
   font-weight: bold;
-  color: red;
+  color: blue;
   text-align:center;
   font-family: fantasy;
 }
