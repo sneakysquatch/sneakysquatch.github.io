@@ -14,49 +14,6 @@
       <img src="https://cdn.wikimg.net/en/splatoonwiki/images/4/4d/OE_Mem_Cake_Marina.png"> 
       </a> <a class=sigma href="https://en.wiktionary.org/wiki/that%27s#Contraction">that's</a>   <a class=sigma href="https://en.wiktionary.org/wiki/OOMF#Phrase">oomf</a>  <a class=sigma href="https://en.wiktionary.org/wiki/%F0%9F%98%AD">😭</a> <a class=sigma href="https://en.wiktionary.org/wiki/%F0%9F%98%AD">😭</a> <a class=sigma href="https://en.wiktionary.org/wiki/%F0%9F%98%AD">😭</a></p>
     <img src="tenor.gif">
-	<hr>
-	  	<div class="countdown">
-        <h3><span style="color:#FF0000">C</span><span style="color:#FF2E00">o</span><span style="color:#FF5D00">u</span><span style="color:#FF8B00">n</span><span style="color:#FFB900">t</span><span style="color:#FFE800">d</span><span style="color:#E8FF00">o</span><span style="color:#B9FF00">w</span><span style="color:#8BFF00">n</span> <span style="color:#5DFF00">t</span><span style="color:#2EFF00">o</span> <span style="color:#00FF00">N</span><span style="color:#00FF2E">e</span><span style="color:#00FF5D">x</span><span style="color:#00FF8B">t</span> <span style="color:#00FFB9">D</span><span style="color:#00FFE8">a</span><span style="color:#00E8FF">i</span><span style="color:#00B9FF">m</span><span style="color:#008BFF">a</span> <span style="color:#005DFF">E</span><span style="color:#002EFF">p</span><span style="color:#0000FF">i</span><span style="color:#2E00FF">s</span><span style="color:#5D00FF">o</span><span style="color:#8B00FF">d</span><span style="color:#B900FF">e</span> <span style="color:#E800FF">A</span><span style="color:#FF00E8">i</span><span style="color:#FF00B9">r</span><span style="color:#FF008B">i</span><span style="color:#FF005D">n</span><span style="color:#FF002E">g</span></h3>
-        <p id="timer">Calculating...</p>
-    </div>
-    <script>
-        function getNextFridayAt1PM() {
-            const now = new Date();
-            const nextFriday = new Date(now);
-
-            // Calculate days until next Friday
-            const daysUntilFriday = (5 - now.getDay() + 7) % 7 || 7;
-            nextFriday.setDate(now.getDate() + daysUntilFriday);
-
-            // Set to 1:00 PM
-            nextFriday.setHours(13, 0, 0, 0);
-            return nextFriday;
-        }
-
-        function updateCountdown() {
-            const now = new Date();
-            const nextFriday = getNextFridayAt1PM();
-            const timeDiff = nextFriday - now;
-
-            if (timeDiff <= 0) {
-                document.getElementById("timer").innerText = "It's time!";
-                return;
-            }
-
-            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-            document.getElementById("timer").innerText =
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        // Start the countdown
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
-
     <hr>
     <iframe src="Super Mario Bros.html" height="500" width="500">
     </body>
