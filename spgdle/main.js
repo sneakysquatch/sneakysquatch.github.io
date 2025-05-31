@@ -18058,7 +18058,7 @@
               (0, on.jsx)(Un, {
                 children: (0, on.jsx)("p", {
                   children:
-                    "Answer in as few tries as possible and share your score!",
+                    "Answer in as few tries as possible and share your score! THIS GAME WILL NOT FUNCTION WITHOUT AN ADBLOCKER! uBlock Origin is recommended.",
                 }),
               }),
               (0, on.jsx)(an, {
