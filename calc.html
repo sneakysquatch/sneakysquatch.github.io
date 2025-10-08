@@ -1,5 +1,39 @@
 <p>calculator test</p>
 <label for="number1">Number 1</label>
 <input type="number" id="number1">
+<br>
 <label for="number2">Number 2</label>
 <input type="number" id="number2">
+<form>
+    <input type="button" value="+" id="add">
+    <input type="button" value="-" id="subtract">
+    <input type="button" value="*" id="multiply">
+    <input type="button" value="/" id="divide">
+</form>
+<p id="output">output will appear here.</p>
+<script>
+let a = document.getElementById('number1');
+let b = document.getElementById('number2');
+const addbutton = document.querySelector("add");
+const subbutton = document.querySelector("subtract");
+const multbutton = document.querySelector("multiply");
+const divbutton = document.querySelector("divide");
+const output = document.querySelector("output");
+
+addbutton.addEventListener("click", adding);
+subbutton.addEventListener("click", subtracting);
+multbutton.addEventListener("click", multiplying);
+divbutton.addEventListener("click", dividing);
+function adding() {
+  output.textContent=(a+b)
+}
+function subtracting() {
+  output.textContent=(a-b)
+}
+function multiplying() {
+  output.textContent=(a*b)
+}
+function dividing() {
+  output.textContent=(a/b)
+}
+</script>
